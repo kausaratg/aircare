@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signuppage</title>
+    <style>
+        label{
+            color: blue;
+            background-color: red;
+            justify-self: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Signup Page!</h1>
+    {% if messages %}
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    {% endif %}
+    <form action="" method="post"> 
+        {% csrf_token %}
+        <label for="Username"> Username</label>
+        <input type="text" name = 'username' id="Username" placeholder="Enter Your Username!">
+        <br>
+        <br>
+
+        <label for="FirstNamme"> First Name</label>
+        <input type="text" name= 'FirstName' id="FirstNamme" placeholder="Enter Your First Name!">
+        <br>
+        <br>
+
+        <label for="LastName"> Last  Name</label>
+        <input type="text" name="LastName"  id="LastName" placeholder="Enter Your Last Name!">
+
+        <br>
+        <br>
+        <label for="email"> Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter Your Email">
+        <br>
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password1" id="password"  placeholder="Enter Your Password!">
+        <br>
+        <br>
+
+        <label for="password"> Confirm Password</label>
+        <input type="password" name="password2" id="password" placeholder="Confirm Your Password!">
+
+        <br>
+        <br>
+        <button type="submit">SignUp</button>
+
+
+
+    </form>
+</body>
+</html>
